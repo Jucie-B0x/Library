@@ -3,19 +3,39 @@ body {
     margin: 0px;
 }
 .container {
+    padding: 30px;
+    box-sizing: border-box;
+    height: 100vh;
+
+}
+.shelf {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit,minmax(200px, 1fr));
     gap: 20px;
     align-self: center;
     justify-self: center;
     width: 50vw;
-    height: 100vh;
+    height: 100%;
     padding: 20px;
+    position: relative;
 }
 
-.container > div {
+.shelf > div {
     border: solid black 1px;
     
+}
+
+#overlay {
+    z-index: 1;
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    background-color: rgba(99, 101, 102, 0.212);
+
+}
+
+.bookForm {
+  display: flex;
 }
