@@ -4,7 +4,6 @@ const myLibrary = [
     new Book ('Dune', 'Frank Herbert', '412', '1965'),
     new Book('The Da Vinci Code', 'Dan Brown','689','2003'),
 ];
-// document.getElementById("addToShelf").addEventListener("click", intake);
 let container = document.querySelector('.container');
 let shelf = document.querySelector('.shelf');
 
@@ -29,8 +28,16 @@ function addBookToShelf () {
     myLibrary.forEach((book) => {
        let card = document.createElement('div');
        card.classList.add('card')
-       card.innerText = book;
        shelf.appendChild(card)
+    //    for (value in book) { 
+        let info = Object.values(book);
+        for (let i = 0; i<info.length-1; i++ ) {
+            let p = document.createElement('p');
+            p.innerText = info[i];
+            card.appendChild(p)
+        }
+    //    console.log(Object.values(book));
+    //    }
        
     }
 )}
