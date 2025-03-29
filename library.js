@@ -4,6 +4,10 @@ const myLibrary = [
     new Book ('Dune', 'Frank Herbert', '412', '1965'),
     new Book('The Da Vinci Code', 'Dan Brown','689','2003'),
 ];
+
+let openButton = document.querySelector('#addToShelf')
+let closeButton = document.querySelector("#close")
+let modal = document.querySelector('dialog')
 let container = document.querySelector('.container');
 let shelf = document.querySelector('.shelf');
 
@@ -29,18 +33,24 @@ function addBookToShelf () {
        let card = document.createElement('div');
        card.classList.add('card')
        shelf.appendChild(card)
-    //    for (value in book) { 
         let info = Object.values(book);
         for (let i = 0; i<info.length-1; i++ ) {
             let p = document.createElement('p');
             p.innerText = info[i];
             card.appendChild(p)
         }
-    //    console.log(Object.values(book));
-    //    }
+    
        
     }
 )}
+
+openButton.addEventListener('click', () => {
+    modal.showModal();
+})
+
+closeButton.addEventListener('click', () => {
+    modal.close()
+})
 
 addBookToShelf();
 
