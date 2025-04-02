@@ -28,3 +28,15 @@ body {
 .card {
     border: solid black 2px
 }
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
+}
+
+
+dialog{
+    scale: 120%;
+}
