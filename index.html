@@ -15,9 +15,25 @@
 
         <dialog>
             <form>
+                <label for="author">Author</label>
                 <input type="text" name="author" id="author">
-                <button type="submit">Submit</button>
+                
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+
+                <label for="pages">Pages</label>
+                <input type="text" name="pages" id="pages">
+                
+                <label for="publish">Publish Year</label>
+                <input type="text" name="publish" id="publish">
+
+                <label for="hasRead">Check if read</label>
+                <input type="checkbox" id="hasRead" name="hasRead">
+
+
+                <button type="submit" id="submit" name="submit">Submit</button>
                 <button id="close" type="submit" formmethod="dialog">Cancel</button>
+
             </form>
         </dialog>
         <div class="shelf">
